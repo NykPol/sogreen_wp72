@@ -1,6 +1,6 @@
 # SoGreen Task 7.2: Extracting geospatial information from maps
 This project was developed at the SGH Warsaw School of Economics.
-The author is mgr Nykyta Polituchyi. Scientific supervision was provided by prof. SGH, dr hab. Przemysław Szufel.
+The author is Nykyta Polituchyi. Scientific supervision was provided by Przemysław Szufel.
 
 ## Overview
 
