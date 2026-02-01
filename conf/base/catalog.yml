@@ -1,0 +1,19 @@
+# Here you can define all your datasets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://docs.kedro.org/en/stable/data/data_catalog.html
+
+# Processed parks data (reads city_name from parameters.yml)
+processed_geotags_data:
+  type: geopandas.GenericDataset
+  filepath: data/01_raw/${params:city_name}_geotags.geojson
+
+# City boundary GeoDataFrame
+city_boundary_gdf:
+  type: geopandas.GenericDataset
+  filepath: data/01_raw/${params:city_name}_boundary.geojson
+
+# HTML report path (output)
+html_report_path:
+  type: text.TextDataset
+  filepath: data/08_reporting/${params:city_name}_report_path.txt

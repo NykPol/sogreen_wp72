@@ -1,0 +1,87 @@
+# This is a boilerplate parameters config generated for pipeline 'osm_data_extraction'
+# using Kedro 1.0.0.
+#
+# Documentation for this file format can be found in "Parameters"
+# Link: https://docs.kedro.org/en/1.0.0/configuration/parameters.html
+
+# Configuration for OSM data extraction
+city_name: "Warsaw"
+country: "Poland"
+
+# OSM tags organized by categories with geometry specifications
+# Geometry types: "point", "area", "line", "any", or ["point", "area"] for multiple
+osm_tags:
+  - category: "Environmental/Green Infrastructure"
+    tags:
+      leisure:
+        - value: "park"
+          geometry: "area"
+        - value: "garden"
+          geometry: "area"
+        - value: "nature_reserve"
+          geometry: "area"
+      landuse:
+        - value: "grass"
+          geometry: "area"
+        - value: "forest"
+          geometry: "area"
+        - value: "park"
+          geometry: "area"
+        - value: "recreation_ground"
+          geometry: "area"
+        - value: "meadow"
+          geometry: "area"
+      natural:
+        - value: "wood"
+          geometry: "area"
+        - value: "water"
+          geometry: "area"
+        - value: "wetland"
+          geometry: "area"
+  
+  - category: "Sustainable Mobility"
+    tags:
+      highway:
+        - value: "cycleway"
+          geometry: "line"
+        - value: "footway"
+          geometry: "line"
+        - value: "pedestrian"
+          geometry: "line"
+        - value: "bus_stop"
+          geometry: "point"
+      railway:
+        - value: "subway_entrance"
+          geometry: "point"
+        - value: "tram_stop"
+          geometry: "point"
+        - value: "station"
+          geometry: "point"
+      public_transport:
+        - value: "stop_position"
+          geometry: "point"
+      amenity:
+        - value: "bicycle_rental"
+          geometry: "point"
+        - value: "charging_station"
+          geometry: "point"
+  
+  - category: "Socioeconomic Context and Accessibility"
+    tags:
+      amenity:
+        - value: "school"
+          geometry: ["point", "area"]
+        - value: "hospital"
+          geometry: ["point", "area"]
+        - value: "clinic"
+          geometry: "point"
+        - value: "university"
+          geometry: ["point", "area"]
+      healthcare:
+        - value: "hospital"
+          geometry: ["point", "area"]
+        - value: "clinic"
+          geometry: "point"
+        - value: "centre"
+          geometry: "point"
+
